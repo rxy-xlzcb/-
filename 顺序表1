@@ -1,0 +1,19 @@
+#include<stdio.h>
+#define MAXSIZE 100
+typedef int elemtype;    //定义elemtype为整型；
+typedef struct //定义顺序表结构体
+{
+	elemtype data[MAXSIZE];//储存元素数组
+	int length;
+}seqlist;
+int main(seqlist* L, elemtype e)
+{
+	if (L->length >= MAXSIZE)
+	{
+		printf("顺序表满");
+			return 0;
+	}
+	L->data[L->length] = e;
+	L->length++;
+	return 1;
+}
